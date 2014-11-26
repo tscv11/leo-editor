@@ -60,6 +60,8 @@
 <v t="EKR.20040519090846.1"><vh>@asis ../../LICENSE.TXT</vh></v>
 <v t="EKR.20040519090846.8"><vh>@asis ../../PKG-INFO.TXT</vh></v>
 <v t="EKR.20040519090846.9"><vh>@asis ../../README.TXT</vh></v>
+<v t="maphew.20141126130213.3"><vh>@edit ../../setup.cfg</vh></v>
+<v t="maphew.20141126130213.2"><vh>@file ../../setup.py</vh></v>
 </v>
 <v t="ekr.20141118074110.4"><vh>Discussions</vh>
 <v t="ekr.20141118074110.2"><vh>Matt's workflow for updating pypi</vh></v>
