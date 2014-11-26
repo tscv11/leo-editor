@@ -22,7 +22,7 @@ var/
 .installed.cfg
 *.egg
 
-./MANIFEST
+#./MANIFEST
 #./setup.cfg
 leo/test/unittest/rst_write_test.txt
 *.exe
