@@ -26,7 +26,7 @@
 <v t="ekr.20101026142031.1516"><vh>Registry Keys</vh></v>
 </v>
 </v>
-<v t="EKR.20040519091259"><vh>Annoucements</vh>
+<v t="EKR.20040519091259"><vh>Announcements</vh>
 <v t="EKR.20040519091259.1"><vh>Download statistics</vh></v>
 <v t="ekr.20101115090518.1494"><vh>Leo 4.8 final</vh></v>
 <v t="ekr.20110603112852.1505"><vh>Leo 4.9 final</vh></v>
@@ -45,7 +45,7 @@
 <v t="EKR.20040519091259.4"><vh>October 2003</vh></v>
 </v>
 </v>
-<v t="EKR.20040519090846"><vh>Distribution files</vh>
+<v t="EKR.20040519090846" a="E"><vh>Distribution files</vh>
 <v t="ekr.20141016105045.2119"><vh>@asis ../../.gitattributes</vh></v>
 <v t="ekr.20130809141000.1990"><vh>@asis ../../INSTALL.TXT</vh>
 <v t="ekr.20130809141000.1991"><vh>System requirements</vh></v>
