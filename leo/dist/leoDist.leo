@@ -63,6 +63,7 @@
 <v t="maphew.20141126130213.3"><vh>@edit ../../setup.cfg</vh></v>
 <v t="maphew.20141126130213.2"><vh>@file ../../setup.py</vh></v>
 <v t="maphew.20141126131006.2" a="E"><vh>setup.py scrapbook</vh>
+<v t="maphew.20141126230535.2"><vh>Required reading</vh></v>
 <v t="maphew.20130503222911.1635"><vh>get_long_description</vh></v>
 <v t="ville.20090213231648.3"><vh>fullsplit (never used)</vh></v>
 <v t="ville.20090213231648.4"><vh>purelib hack</vh></v>
@@ -1542,7 +1543,10 @@ if not simple:
 #print data_files
 </t>
 <t tx="maphew.20141126131006.2">@ Place holder for functions ripped out of setup.py, that we may possibly reuse later
+
 @c
+
+
 
 setup(
     name = 'leo',
@@ -1595,6 +1599,26 @@ setup(
         'gui_scripts' : ['leo = leo.core.runLeo:run'],
     }
 )
+@language python
+</t>
+<t tx="maphew.20141126230535.2">@
+Differences between distribute, distutils, setuptools and distutils2?
+http://stackoverflow.com/questions/6344076/
+
+    Sept 2014 recommendation: "out of all these options, I would recommend
+    Setuptools, unless your requirements are very basic and you only need
+    Distutils. Setuptools works very well with Virtualenv and Pip"
+    
+
+Python Packaging User Guide
+https://python-packaging-user-guide.readthedocs.org/en/latest/index.html
+
+    The “Python Packaging User Guide” (PyPUG) aims to be the authoritative
+    resource on how to package and install Python distributions using
+    current tools, but also on the efforts to improve Python packaging. ...
+    This guide is maintained on github by the Python Packaging Authority
+    (PyPA).
+    
 </t>
 <t tx="ville.20090213231648.3">def fullsplit(path, result=None):
     """
