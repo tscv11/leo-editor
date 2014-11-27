@@ -1,5 +1,9 @@
 #@+leo-ver=5-thin
 #@+node:maphew.20141126130213.2: * @file ../../setup.py
+from distutils.core import setup
+import leo.core.leoVersion
+#@+others
+#@+node:maphew.20141126230535.3: ** docstring
 '''setup.py for leo
 
     Nov 2014: strip to bare minimum and rebuild using ONLY
@@ -9,11 +13,25 @@
     `pip install .` on all platforms) without having to leave standard library
     or leverage hacks.    
 '''
-from distutils.core import setup
-#@+others
+#@+node:maphew.20141126230535.4: ** classifiers
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Win32 (MS Windows)',
+    'Environment :: X11 Applications :: Qt',
+    'Intended Audience :: End Users/Desktop',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX :: Linux',
+    'Programming Language :: Python :: 2.6',
+    'Programming Language :: Python :: 3',
+    'Topic :: Software Development',
+    'Topic :: Text Editors',
+    'Topic :: Text Processing',
+    ]
 #@-others
-import leo.core.leoVersion
-#long_description = get_long_description()
 
 setup(
     name = 'leo',
@@ -23,28 +41,9 @@ setup(
     url = 'http://leoeditor.com',
     license = 'MIT License',
     description = "Leo: Leonine Editor with Outlines", # becomes "Summary" in pkg-info
-    #long_description = long_description,
     platforms = ['Linux','Windows','MacOS'],
     download_url = 'http://sourceforge.net/projects/leo/files/Leo/',
-    requires = ['docutils'],
-        # only include dependencies which can be installed by pip (so not PyQt or SIP)
-    classifiers = [
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Win32 (MS Windows)',
-        'Environment :: X11 Applications :: Qt',
-        'Intended Audience :: End Users/Desktop',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        'Operating System :: MacOS',
-        'Operating System :: Microsoft :: Windows',
-        'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 3',
-        'Topic :: Software Development',
-        'Topic :: Text Editors',
-        'Topic :: Text Processing',
-    ],
+    classifiers = classifiers
     #zip_safe = False,
 )
 
