@@ -44,8 +44,8 @@ setup(
     platforms = ['Linux','Windows','MacOS'],
     download_url = 'http://sourceforge.net/projects/leo/files/Leo/',
     classifiers = classifiers,
-    packages = ['', 'core'], 
-    package_dir = {'': 'leo'},
+    #packages = ['', 'core'], 
+    #package_dir = {'': 'leo'},
 )
 
 #@@language python
