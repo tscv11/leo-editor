@@ -43,8 +43,8 @@ setup(
     description = "Leo: Leonine Editor with Outlines", # becomes "Summary" in pkg-info
     platforms = ['Linux','Windows','MacOS'],
     download_url = 'http://sourceforge.net/projects/leo/files/Leo/',
-    classifiers = classifiers
-    #zip_safe = False,
+    classifiers = classifiers,
+    packages = ['leo'], # on it's own, add's leo/__init__.py and nothing else
 )
 
 #@@language python
