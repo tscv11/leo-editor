@@ -7,7 +7,7 @@
     
     See if we can get all the way to end (painless `python setup.py install` and
     `pip install .` on all platforms) without having to leave standard library
-    or leverage hacks.
+    or leverage hacks.    
 '''
 from distutils.core import setup
 #@+others
@@ -46,10 +46,6 @@ setup(
         'Topic :: Text Processing',
     ],
     #zip_safe = False,
-    entry_points = {
-        'console_scripts': ['leoc = leo.core.runLeo:run'],
-        'gui_scripts' : ['leo = leo.core.runLeo:run'],
-    }
 )
 
 #@@language python
