@@ -472,23 +472,29 @@
 <v t="tbrown.20140412113009.50227"><vh>Snapshots</vh></v>
 </v>
 <v t="ekr.20131008041326.16094"><vh>@rst html/installing.html</vh>
-<v t="ekr.20141105052052.4"><vh>Dependencies</vh></v>
-<v t="ekr.20180130033527.1"><vh>Installing Leo with pip</vh></v>
-<v t="ekr.20101125062332.5090"><vh>Installing packages</vh></v>
-<v t="ekr.20170206073848.1"><vh>Installing Leo itself</vh>
-<v t="ekr.20170206073747.2"><vh>Installing Leo on Windows</vh>
-<v t="ekr.20170206073747.3"><vh>Using the single-click installer</vh></v>
-<v t="ekr.20170206073747.4"><vh>Installing from sources (Windows)</vh></v>
-<v t="ekr.20170206073747.5"><vh>Creating Windows file associations</vh></v>
-</v>
-<v t="ekr.20170206073747.10"><vh>Installing Leo with git</vh></v>
+<v t="ekr.20180126191031.1"><vh>Installing everything with Anaconda or Miniconda</vh></v>
+<v t="maphew.20180201231854.1"><vh>Install using OS package manager</vh>
 <v t="ekr.20170206073747.6"><vh>Installing Leo on Linux</vh>
 <v t="ekr.20170206073747.7"><vh>Installing from a debian package</vh></v>
 <v t="ekr.20170206073747.8"><vh>Installing from sources (Linux)</vh></v>
 </v>
 <v t="ekr.20170206073747.9"><vh>Installing Leo on MacOs 10.7 (Lion) and later</vh></v>
+<v t="ekr.20170206073747.2"><vh>Installing Leo on Windows</vh>
+<v t="ekr.20170206073747.3"><vh>Using the single-click installer</vh></v>
+<v t="ekr.20170206073747.4"><vh>Installing from sources (Windows)</vh></v>
+<v t="ekr.20170206073747.5"><vh>Creating Windows file associations</vh></v>
 </v>
-<v t="ekr.20180126191031.1"><vh>Installing everything with Anaconda or Miniconda</vh></v>
+</v>
+<v t="maphew.20180201230234.1"><vh>Install in pieces</vh>
+<v t="ekr.20170206073747.10"><vh>Get source code with git</vh></v>
+<v t="maphew.20180201233200.1"><vh>Pip from PyPi or Source</vh></v>
+<v t="ekr.20141105052052.4"><vh>Dependencies</vh></v>
+</v>
+<v t="maphew.20180201233948.1"><vh>Desktop integration</vh></v>
+<v t="maphew.20180202000615.1"><vh>--Scrapbook--</vh>
+<v t="ekr.20101125062332.5090"><vh>Installing packages</vh></v>
+<v t="ekr.20180130033527.1"><vh>Installing Leo with pip</vh></v>
+</v>
 </v>
 <v t="ekr.20131008041326.16140"><vh>@rst html/running.html</vh>
 <v t="ekr.20131008041326.16151"><vh>Running Leo</vh>
@@ -22270,7 +22276,6 @@ Here is my installation write-up:
 
 It would really be great to get a Leo formula going for Homebrew. As mentioned before, the main question is just where to place all the Leo files in the /usr/local hierarchy.
 </t>
-<t tx="ekr.20170206073848.1"></t>
 <t tx="ekr.20170206095132.1">https://github.com/leo-editor/leo-editor/issues/402
 
 Added g.input_, but this is not a great solution.
@@ -25858,19 +25863,23 @@ button using Ctrl-P.
 <t tx="ekr.20180126185857.1"></t>
 <t tx="ekr.20180126190015.1"></t>
 <t tx="ekr.20180126190053.1"></t>
-<t tx="ekr.20180126191031.1">The `Anaconda`_ scientific computing environment includes Python, NumPy, SciPy, PyQt, and over a thousand other tools, packages and libraries. It's a 500+ MB download but you're guaranteed to have everything needed.
+<t tx="ekr.20180126191031.1">_The smoothest route, with the same recipe working across Linux, MacOS and Windows._
 
-To install Leo do this from a console::
+The `Anaconda`_ scientific computing environment includes Python, NumPy, SciPy, PyQt, and over a thousand other tools, packages and libraries. It's a 500+ MB download but you're guaranteed to have everything needed.
+
+To install Leo do this from an Anaconda console::
 
     pip install leo
 
-The `Miniconda`_ environment includes just Python and the `conda` package management tool. Pick and choose from the full Anaconda ecosystem.
+The `Miniconda`_ environment includes just Python and the `conda` package management tool. A 60 MB download and then pick and choose from the full Anaconda ecosystem.
 
-To install Leo do this from a console::
+To install Leo do this from an Anaconda console::
 
     conda install pyqt5
     pip install leo
-</t>
+
+
+Proceed to `Desktop integration`_</t>
 <t tx="ekr.20180127092625.1">https://github.com/leo-editor/leo-editor/issues/659</t>
 <t tx="ekr.20180128051013.1">for pane in ('body', 'tree', 'log'):
     highlight(pane)
@@ -25969,6 +25978,56 @@ Leo's `git repository`_ and Leo distributions contain the following reference fi
 The fix was in ni.compute_last_index.
 
 </t>
+<t tx="maphew.20180201230234.1">_If the all inclusive install methods don't work for your situation, here's the component breakdown._
+
+1. Install `Python`_ (v3 preferred, but Leo is backwards compatible to v2.6)
+2. Install `PyQt5`_ (preferred) or `PyQt4`_
+3. Install `pip`_ (if needed)
+4. Install Leo with pip, either from PyPi or GitHub source.
+   a. Pip will include optional but recommended packages fom `Dependencies`_
+5. Install optional packages
+6. Desktop integration
+</t>
+<t tx="maphew.20180201231854.1"></t>
+<t tx="maphew.20180201233200.1">.. _`Install pip`:      https://pip.pypa.io/en/stable/installing/               
+.. _`Install Python`:   http://python.org.
+.. _`pip`:              https://pypi.python.org/pypi/pip
+.. _`Convert shallow clone to full clone`:  https://stackoverflow.com/questions/6802145/convert-shallow-clone-to-full-clone
+
+
+Python's `pip`_ tool will download *and* install Leo and all of Leo's dependencies automatically
+
+1. Check whether pip has been installed using the terminal window command below. If there's an error `Install pip`_:
+
+    pip --version
+
+2. Install Leo and all required packages
+
+**From PyPi**::
+
+    pip install leo
+    
+**From Sources (GitHub)**::
+If you don't use git, substiute `git clone` with 'Download and unpack https://github.com/leo-editor/leo-editor/archive/master.zip'.
+
+    git clone --depth=500 https://github.com/leo-editor/leo-editor leo-editor
+    cd leo-editor
+    pip install --editable .
+
+Note: The optional `--depth=500` parameter speeds up the clone process
+_dramatically_ by only fetching the last 500 commits (about 3 months
+at current rate). If you later need to go farther back in time use
+`git fetch --unshallow` (see `Convert shallow clone to full clone`_
+for fine tuning).
+
+When you want to refresh the code with latest modifications from
+GitHub, run `git pull`.
+ </t>
+<t tx="maphew.20180201233948.1">TODO:
+- File assocations
+- Desktop link
+- Start Menu link</t>
+<t tx="maphew.20180202000615.1"></t>
 <t tx="peckj.20130813123907.6841" str_atime="1376414164.0" str_mtime="1376412039.0" str_ctime="1376412039.0">Documenting new plugins is important for users to be able understand and use the features they add. To that effect, there are a few documentation steps that should not be overlooked.
 
 - Document the plugin thoroughly in the plugin's docstring. This allows the documentation to be accessed from the Plugins menu.
