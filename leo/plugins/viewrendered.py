@@ -295,6 +295,12 @@ def init():
     global got_docutils
     ok = bool(got_docutils and QtSvg and QtWebKitWidgets)
     if not ok:
+        ok = bool(QtSvg)
+        if not ok:
+            g.es('Warning: viewrendered.py running without QtSvg.')
+        ok = bool(QtWebKitWidgets)
+        if not ok:
+            g.es('Warning: viewrendered.py running without QtWebKitWidgets.')
         g.es_print('Warning: viewrendered.py running without docutils.')
     # Always enable this plugin, even if imports fail.
     g.plugin_signon(__name__)
